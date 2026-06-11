@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowDraw AI - Neon Air Drawing App</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="status-panel">
+        Gesture Mode: <span id="mode-text">Detecting Hand...</span>
+    </div>
+
+    <div id="container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="paintCanvas" width="800" height="600"></canvas>
+
+        <div id="controls">
+            <div class="control-group">
+                <label for="colorPicker">Color</label>
+                <input type="color" id="colorPicker" value="#00ffca">
+            </div>
+            
+            <div class="control-group">
+                <label for="brushSize">Size</label>
+                <input type="range" id="brushSize" min="5" max="40" value="15">
+            </div>
+
+            <button id="clearBtn">Clear Board</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
